@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -35,7 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (len);
 }
-
+/*
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -56,3 +54,4 @@ int	main(void)
 	printf("%zu\n", ft_strlcpy(dest, src, 7));
 	ft_putstr(dest);
 }
+*/

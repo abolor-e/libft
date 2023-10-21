@@ -5,8 +5,7 @@
 **by str to int representation
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {
@@ -36,8 +35,9 @@ int ft_atoi(const char *str)
     }
     return (res * s);
 }
-
+/*
 int main(void)
 {
     printf("%d\n", ft_atoi("12345"));
 }
+*/

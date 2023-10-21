@@ -1,15 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-char    charmodify(unsigned int i, char c)
-{
-    if (i % 2 == 1)
-    {
-        return (c + 32);
-    }
-    return (c);
-}
 
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -30,6 +19,15 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     res[i] = '\0';
     return (res);
 }
+/*
+char    charmodify(unsigned int i, char c)
+{
+    if (i % 2 == 1)
+    {
+        return (c + 32);
+    }
+    return (c);
+}
 
 int main(void)
 {
@@ -37,3 +35,4 @@ int main(void)
 
     printf("%s\n", ft_strmapi(s, charmodify));
 }
+*/

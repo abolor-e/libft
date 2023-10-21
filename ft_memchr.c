@@ -6,8 +6,7 @@
 **or NULL if no such byte exists within n bytes.
 */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void    *ft_memchr(const void *s, int c, size_t n)
 {
@@ -25,7 +24,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
     }
     return (0);
 }
-
+/*
 int main(void)
 {
     int c;
@@ -36,3 +35,4 @@ int main(void)
     res = ft_memchr(s, c, 2);
     printf("%s\n", res);
 }
+*/

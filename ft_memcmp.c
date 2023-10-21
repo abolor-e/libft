@@ -7,8 +7,7 @@
 **bytes.
 */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -23,7 +22,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
     return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
-
+/*
 int main(void)
 {
     char    s1[50] = "abcde";
@@ -33,3 +32,4 @@ int main(void)
     res = ft_memcmp(s1, s2, 4);
     printf("%d\n", res);
 }
+*/

@@ -5,8 +5,7 @@
 **The memmove function returns the original value of dst.
 */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void    *ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -35,8 +34,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
     }
     return (dst);
 }
-
-
+/*
 int main(void)
 {
     char    src[30] = "Hello, World!";
@@ -45,3 +43,4 @@ int main(void)
     ft_memmove(src + 2, src, 13);
     printf("%s\n", src);
 }
+*/

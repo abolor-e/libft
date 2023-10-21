@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char    *ft_strjoin(char const *s1, char const *s2)
 {
@@ -35,7 +34,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
     ns[a + i] = '\0';
     return (ns);
 }
-
+/*
 int main(void)
 {
     char    s1[20] = "Hello World!";
@@ -43,3 +42,4 @@ int main(void)
 
     printf("%s\n", ft_strjoin(s1, s2));
 }
+*/

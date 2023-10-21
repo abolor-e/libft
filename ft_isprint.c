@@ -15,7 +15,7 @@
 **The function tests for any printing character, including space ('\ ').
 */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isprint(int c)
 {
@@ -24,8 +24,9 @@ int ft_isprint(int c)
     else
         return (0);
 }
-
+/*
 int main(void)
 {
     printf("%d\n", ft_isprint('~'));
 }
+*/

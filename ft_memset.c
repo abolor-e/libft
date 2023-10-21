@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -28,22 +27,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	 }
 	 return (b);
 }
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	if (!dest || !src)
-		return (NULL);
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
-}
-
+/*
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -64,3 +48,4 @@ int	main(void)
 	ft_putstr(str);
 	return (0);
 }
+*/

@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -40,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[d] = '\0';
 	return (d);
 }
-
+/*
 void	ft_putstr(char *str)
 {
 	int	i;
@@ -61,7 +59,4 @@ int	main(void)
 	printf("%zu\n", ft_strlcat(dst, src, 25));
 	ft_putstr(dst);
 }
-
-
-
-
+*/

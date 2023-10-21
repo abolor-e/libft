@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <strings.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -29,31 +27,7 @@ void	ft_bzero(void *s, size_t n)
 	return ;
 }
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
-}
-
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-}
-
+/*
 int	main(void)
 {
 	char	str[40] = "Hello World!";
@@ -61,3 +35,4 @@ int	main(void)
 	ft_bzero(str, 5);
 	printf("%s\n", str);
 }
+*/

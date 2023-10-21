@@ -5,9 +5,7 @@
 **as an argument to the function free.
 */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char    *ft_strdup(const char *s1)
 {
@@ -32,7 +30,7 @@ char    *ft_strdup(const char *s1)
     res[i] = '\0';
     return (res);
 }
-
+/*
 int main(void)
 {
     char    s[50] = "Hello World!";
@@ -41,3 +39,4 @@ int main(void)
     res = ft_strdup(s);
     printf("%s\n", res);
 }
+*/

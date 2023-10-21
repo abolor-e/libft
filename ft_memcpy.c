@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -31,7 +30,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
+/*
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -47,16 +46,6 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
 int	main(void)
 {
 	char	src[50] = "Hello World!";
@@ -69,3 +58,4 @@ int	main(void)
 	
 	return (0);
 }
+*/

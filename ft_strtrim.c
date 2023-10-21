@@ -1,8 +1,4 @@
-
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
 
 char    *ft_strtrim(char const *s1, char const *set)
 {
@@ -28,7 +24,7 @@ char    *ft_strtrim(char const *s1, char const *set)
     res[start] = '\0';
     return (res);
 }
-
+/*
 int main(void)
 {
     char    s1[50] = "Hello, World!";
@@ -36,3 +32,4 @@ int main(void)
 
     printf("%s\n", ft_strtrim(s1, set));
 }
+*/

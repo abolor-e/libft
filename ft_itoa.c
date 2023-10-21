@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 int ft_digits(int n)
 {
@@ -39,8 +38,9 @@ char    *ft_itoa(int n)
         *(res + 0) = '-';
     return (res);
 }
-
+/*
 int main(void)
 {
     printf("%s\n", ft_itoa(-1));
 }
+*/

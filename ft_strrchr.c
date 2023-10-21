@@ -19,8 +19,7 @@ to the located character, or NULL if the character does not appear
 **in the string.
 */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char    *ft_strrchr(const char *s, int c)
 {
@@ -39,7 +38,7 @@ char    *ft_strrchr(const char *s, int c)
     }
     return (NULL);
 }
-
+/*
 int main(void)
 {
     char    s[50] = "Hello World!";
@@ -50,3 +49,4 @@ int main(void)
     res = ft_strrchr(s, c);
     printf("%s\n", res);
 }
+*/

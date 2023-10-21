@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*
 #include "libft.h"
 
 int ft_check(char c, char a)
@@ -82,3 +82,4 @@ int main(int ac, char **av)
         printf("%c\n", **ft_split(av[1], *av[2]));
     }
 }
+*/

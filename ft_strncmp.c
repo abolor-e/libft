@@ -7,8 +7,7 @@
 **RETURN VALUE: Returns an int greater, less or equal to 0.
 */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -23,7 +22,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     }
     return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
+/*
 int main(void)
 {
     char    s1[40] = "abcde";
@@ -36,3 +35,4 @@ int main(void)
     else
         printf("s1 and s2 are equal %d\n", ft_strncmp(s1, s2, 5));
 }
+*/

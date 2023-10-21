@@ -1,6 +1,5 @@
 #include "libft.h"
 
-
 void    ft_putnbr_fd(int n, int fd)
 {
     if (n == -2147483647)
@@ -22,8 +21,8 @@ void    ft_putnbr_fd(int n, int fd)
     else
         ft_putchar_fd((n + 48), fd);
 }
-
-/*int main(void)
+/*
+int main(void)
 {
     ft_putnbr_fd(-2147483647, 1);
 }

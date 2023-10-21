@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 void    ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -14,7 +13,7 @@ void    ft_striteri(char *s, void (*f)(unsigned int, char*))
         i++;
     }
 }
-
+/*
 void modifychar(unsigned int index, char *c) 
 {
     if (*c >= 65 && *c <= 90)
@@ -30,3 +29,4 @@ int main()
 
     return 0;
 }
+*/

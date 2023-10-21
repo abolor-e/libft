@@ -10,8 +10,7 @@
 **of needle is returned.
 */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -37,7 +36,7 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     }
     return (0);
 }
-
+/*
 int main(void)
 {
     char    haystack[50] = "Hello World, Hello People!";
@@ -45,3 +44,4 @@ int main(void)
 
     printf("%s\n", ft_strnstr(haystack, needle, 11));
 }
+*/
