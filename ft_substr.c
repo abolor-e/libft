@@ -6,7 +6,7 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:00:43 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 13:00:45 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 13:49:58 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
         return (NULL);
     while (s[i] != '\0')
     {
-        if (s[i] == start)
+        if (s[i] == (char)start)
         {  
             while (a < len)
             {
