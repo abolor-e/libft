@@ -6,30 +6,30 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:00:00 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 13:00:02 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:48:09 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int    i;
-    char            *res;     
+	unsigned int	i;
+	char			*res;
 
-    i = 0;
-    if (!s || !f)
-        return (NULL);
-    res = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-    if (!res)
-        return (NULL);
-    while (s[i] != '\0')
-    {
-        res[i] = f(i, s[i]);
-        i++;
-    }
-    res[i] = '\0';
-    return (res);
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	res = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!res)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		res[i] = f(i, s[i]);
+		i++;
+	}
+	res[i] = '\0';
+	return (res);
 }
 /*
 char    charmodify(unsigned int i, char c)

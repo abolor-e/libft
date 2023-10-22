@@ -6,7 +6,7 @@
 /*   By: abolor-e <abolor-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:15:00 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/18 12:25:02 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:56:58 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*dest;
-	const unsigned char *source;
+	unsigned char		*dest;
+	const unsigned char	*source;
 
-	dest = (unsigned char*)dst;
-	source = (const unsigned char*)src;
+	dest = (unsigned char *)dst;
+	source = (const unsigned char *)src;
 	if (!dest || !src)
 		return (NULL);
 	while (n > 0)

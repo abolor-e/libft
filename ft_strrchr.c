@@ -6,7 +6,7 @@
 /*   By: abolor-e <abolor-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:03:50 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/18 11:08:58 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:41:00 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@ to the located character, or NULL if the character does not appear
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    while (i > 0)
-    {
-        if (s[i] == (char)c)
-            return ((char *)&s[i]);
-        i--;
-    }
-    return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	while (i > 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
 /*
 int main(void)

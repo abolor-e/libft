@@ -6,22 +6,22 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:58:36 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 12:58:38 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:08:19 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
 /*
 int main(void)

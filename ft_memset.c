@@ -6,7 +6,7 @@
 /*   By: abolor-e <abolor-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:18:16 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/18 13:48:34 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 15:06:17 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t			i;
 
 	i = 0;
-	dest = (unsigned char*)b;
-	 while (len > 0)
-	 {
-		 dest[i] = (unsigned char)c;
-		 len--;
-		 i++;
-	 }
-	 return (b);
+	dest = (unsigned char *)b;
+	while (len > 0)
+	{
+		dest[i] = (unsigned char)c;
+		len--;
+		i++;
+	}
+	return (b);
 }
 /*
 void	ft_putstr(char *str)

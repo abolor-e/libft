@@ -6,7 +6,7 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:55:59 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 12:56:17 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/22 14:52:14 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,33 +18,32 @@
 */
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int i;
-    int s;
-    int res;
+	int	i;
+	int	s;
+	int	res;
 
-    s = 1;
-    i = 0;
-    res = 0;
-    if (!str)
-        return (-1);
-    while (str[i] == '\n' || str[i] == '\t' || str[i] == ' ' || str[i] == '\v'|| str[i] == '\f' || str[i] == '\r')
-    {
-        i++;
-    }
-    if (str[i] == '-' || str[i] == '+')
-    {
-        if (str[i] == '-')
-            s = -1;
-        i++;
-    }
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        res = (res * 10) + (str[i] - '0');
-        i++;
-    }
-    return (res * s);
+	s = 1;
+	i = 0;
+	res = 0;
+	if (!str)
+		return (-1);
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == ' ' || str[i] == '\v' 
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			s = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = (res * 10) + (str[i] - '0');
+		i++;
+	}
+	return (res * s);
 }
 /*
 int main(void)
