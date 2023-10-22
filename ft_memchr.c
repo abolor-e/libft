@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/22 12:56:54 by abolor-e          #+#    #+#             */
+/*   Updated: 2023/10/22 12:57:02 by abolor-e         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 **SYNOPSIS: #include <string.h>
 **DESCRIPTION: The memchr function locates the first occurence
@@ -5,7 +17,6 @@
 **RETURN VALUES: The memchr returns a pointer to the byte located,
 **or NULL if no such byte exists within n bytes.
 */
-
 #include "libft.h"
 
 void    *ft_memchr(const void *s, int c, size_t n)

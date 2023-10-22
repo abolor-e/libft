@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/22 12:57:11 by abolor-e          #+#    #+#             */
+/*   Updated: 2023/10/22 12:57:15 by abolor-e         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 **SYNOPSIS: #include <string.h>
 **The memcp function compares byte string s1 against
@@ -6,7 +18,6 @@
 **strings are identical, otherwise returns the first 2 differing
 **bytes.
 */
-
 #include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)

@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/22 12:55:59 by abolor-e          #+#    #+#             */
+/*   Updated: 2023/10/22 12:56:17 by abolor-e         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 **SYNOPSIS: #include <stdlib.h>
 **DESCRIPTION: the atoi() function converts
 **the initial portion of the string pointed
 **by str to int representation
 */
-
 #include "libft.h"
 
 int ft_atoi(const char *str)

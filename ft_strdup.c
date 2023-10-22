@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/22 12:59:26 by abolor-e          #+#    #+#             */
+/*   Updated: 2023/10/22 12:59:31 by abolor-e         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 **SYNOPSIS: #include <string.h>
 **DESCRIPTION: The strdup() allocates sufficient memory for a copy of the string s1
 **, does the copy, and returns a pointer to it. The pointer may subsequently be used
 **as an argument to the function free.
 */
-
 #include "libft.h"
 
 char    *ft_strdup(const char *s1)
