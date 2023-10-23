@@ -6,21 +6,19 @@
 #    By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/22 13:51:08 by abolor-e          #+#    #+#              #
-#    Updated: 2023/10/22 14:07:21 by abolor-e         ###   ########.fr        #
+#    Updated: 2023/10/23 14:56:37 by abolor-e         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-cc		= cc
+CC		= cc
 
-cflags	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 
-rm		= rm -f
+RM		= rm -f
 
-name	= libft.a
+NAME	= libft.a
 
-all:	${name}
-
-srcs		= ft_isalpha.c	\
+SRCS		= ft_isalpha.c	\
 			  ft_isdigit.c	\
 			  ft_isalnum.c	\
 			  ft_isascii.c	\
@@ -55,19 +53,21 @@ srcs		= ft_isalpha.c	\
 			  ft_putendl_fd.c	\
 			  ft_putnbr_fd.c
 
-objs		= ${srcs:.c=.o}
+all:		${NAME}
 
-${name}:	${objs}
-				ar -rcs ${name} ${objs}
+OBJS		= ${SRCS:.c=.o}
+
+${NAME}:	${OBJS}
+				ar -rcs ${NAME} ${OBJS}
 
 %.o:		%.c
-				${cc} ${cflags} -c $< -o $@
+				${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-				${rm} ${objs}
+				${RM} ${OBJS}
 
 fclean:		clean
-				${rm} ${name}
+				${RM} ${NAME}
 
 re:			fclean all
 

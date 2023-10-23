@@ -6,16 +6,10 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:55:59 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 14:52:14 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:29:06 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-**SYNOPSIS: #include <stdlib.h>
-**DESCRIPTION: the atoi() function converts
-**the initial portion of the string pointed
-**by str to int representation
-*/
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -27,10 +21,8 @@ int	ft_atoi(const char *str)
 	s = 1;
 	i = 0;
 	res = 0;
-	if (!str)
-		return (-1);
-	while (str[i] == '\n' || str[i] == '\t' || str[i] == ' ' || str[i] == '\v' 
-		|| str[i] == '\f' || str[i] == '\r')
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == ' ' 
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -48,6 +40,6 @@ int	ft_atoi(const char *str)
 /*
 int main(void)
 {
-    printf("%d\n", ft_atoi("12345"));
+    printf("%d\n", ft_atoi("+   12345"));
 }
 */

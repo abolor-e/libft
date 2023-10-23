@@ -6,7 +6,7 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 15:16:24 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/16 16:47:09 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:00:58 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	len = 0;
-	if (!dst && !src)
-		return (-1);
 	while (src[len] != '\0')
 		len++;
 	if (dstsize < 1)
