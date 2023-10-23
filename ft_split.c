@@ -6,92 +6,70 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:58:53 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 12:58:57 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:01:55 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include "libft.h"
 
-int ft_check(char c, char a)
+static size_t	ft_slen(const char *s, char c)
 {
-    if (c == a)
-        return (1);
-    return (0);
+	size_t	ret;
+
+	ret = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			++ret;
+			while (*s && *s != c)
+				++s;
+		}
+		else
+			++s;
+	}
+	return (ret);
 }
 
-int ft_s2len(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
-    int i;
-    int a;
+	char	**ret;
+	size_t	i;
+	size_t	len;
 
-    i = 0;
-    a = 0;
-    while (s[i] != '\0')
-    {
-        while (ft_check(s[i], c) && s[i])
-            i++;
-        if (s[i] && !ft_check(s[i], c))
-        {
-            while (s[i] && !ft_check(s[i], c))
-            {
-                i++;
-            }
-            a++;
-        }
-    }
-    return (a);
+	if (!s)
+		return (0);
+	i = 0;
+	ret = malloc(sizeof(char *) * (ft_slen(s, c) + 1));
+	if (!ret)
+		return (0);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			len = 0;
+			while (*s && *s != c && ++len)
+				++s;
+			ret[i++] = ft_substr(s - len, 0, len);
+		}
+		else
+			++s;
+	}
+	ret[i] = 0;
+	return (ret);
 }
-
-char    *ft_strdups(char const *s, char c)
+/*
+int	main(void)
 {
-    int i;
-    char    *res;
+	const char *input = "  This is a test string for Splitting";
+	char	**result = ft_split(input, ' ');
+	int	i;
 
-    i = 0;
-    while (s[i] && !ft_check(s[i], c))
-        i++;
-    res = (char *)malloc(sizeof(char) * (i + 1));
-    if (!res)
-        return (0);
-    i = 0;
-    while (s[i] && !ft_check(s[i], c))
-    {
-        res[i] = s[i];
-        i++;
-    }
-    return (res);
-}
-
-char    **ft_split(char const *s, char c)
-{
-    char    **res;
-    int     i;
-
-    res = malloc(sizeof(char) * (ft_s2len(s, c) + 1));
-    i = 0;
-    if (!res)
-        return (0);
-    while (*s)
-    {
-        while (*s && ft_check(*s, c))
-            s++;
-        if (*s && !ft_check(*s, c))
-        {
-            res[i] = ft_strdups(s, c);
-            i++;
-            while (*s && !ft_check(*s, c))
-                s++;
-        }
-    }
-    return (res);
-}
-
-int main(int ac, char **av)
-{
-    if (ac == 3)
-    {
-        printf("%c\n", **ft_split(av[1], *av[2]));
-    }
+	i = 0;
+	while (result[i])
+	{
+		printf("%s", result[i]);
+		i++;
+	}
 }
 */

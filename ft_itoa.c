@@ -6,7 +6,7 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:56:45 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 14:51:12 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:18:03 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ int	ft_digits(int n)
 {
 	int	i;
 
-	i = 1;
-	while (n /= 10)
+	i = 0;
+	if (n == 0)
+		return (1);
+	while (n != 0)
 	{
+		n /= 10;
 		i++;
 	}
 	return (i);
@@ -53,6 +56,6 @@ char	*ft_itoa(int n)
 /*
 int main(void)
 {
-    printf("%s\n", ft_itoa(-1));
+    printf("%s\n", ft_itoa(-0));
 }
 */

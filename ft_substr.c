@@ -6,36 +6,31 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 13:00:43 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/22 15:16:31 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:03:46 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	a;
 	char	*dest;
 
 	i = 0;
-	a = 0;
+	if (!s)
+		return (NULL);
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);
-	while (s[i] != '\0')
+	while (i < len)
 	{
-		if (s[i] == (char)start)
-		{
-			while (a < len)
-			{
-				dest[a] = s[i + a];
-				a++;
-			}
-		}
+		dest[i] = s[i + start];
 		i++;
 	}
-	dest[a] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 /*
@@ -44,7 +39,8 @@ int main(void)
     char    s[13] = "Hello World!";
     int     start;
 
-    start = 'W';
+    start = 6;
     printf("%s\n", ft_substr(s, start, 6));
+
 }
 */
