@@ -6,17 +6,17 @@
 #    By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/22 13:51:08 by abolor-e          #+#    #+#              #
-#    Updated: 2023/10/23 14:56:37 by abolor-e         ###   ########.fr        #
+#    Updated: 2023/10/25 14:19:46 by abolor-e         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= cc
+NAME		= libft.a
 
-CFLAGS	= -Wall -Wextra -Werror
+CC			= cc
 
-RM		= rm -f
+CFLAGS		= -Wall -Wextra -Werror
 
-NAME	= libft.a
+RM			= rm -f
 
 SRCS		= ft_isalpha.c	\
 			  ft_isdigit.c	\
@@ -53,22 +53,37 @@ SRCS		= ft_isalpha.c	\
 			  ft_putendl_fd.c	\
 			  ft_putnbr_fd.c
 
-all:		${NAME}
+SRCS_BONUS	= ft_lstnew.c	\
+			  ft_lstadd_front.c	\
+			  ft_lstsize.c	\
+			  ft_lstlast.c	\
+			  ft_lstadd_back.c	\
+			  ft_lstdelone.c	\
+			  ft_lstclear.c	\
+			  ft_lstiter.c	\
+			  ft_lstmap.c
 
 OBJS		= ${SRCS:.c=.o}
+
+OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
+
+all:		${NAME}
 
 ${NAME}:	${OBJS}
 				ar -rcs ${NAME} ${OBJS}
 
 %.o:		%.c
-				${CC} ${CFLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+
+bonus:		${OBJS} ${OBJS_BONUS}
+				ar -rcs ${NAME} ${OBJS} ${OBJS_BONUS}
 
 clean:
-				${RM} ${OBJS}
+				${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean:		clean
-				${RM} ${NAME}
+				${RM} ${NAME} ${bonus}
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
