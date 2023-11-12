@@ -11,7 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+void	ft_free_split(char **split_array)
+{
+	size_t	i;
 
+	i = 0;
+	if (split_array == NULL)
+		return ;
+	while (split_array[i] != NULL)
+	{
+		free(split_array[i]);
+		++i;
+	}
+	free(split_array);
+}
+*/
 static size_t	ft_slen(const char *s, char c)
 {
 	size_t	ret;
@@ -50,7 +65,15 @@ char	**ft_split(const char *s, char c)
 			len = 0;
 			while (*s && *s != c && ++len)
 				++s;
-			ret[i++] = ft_substr(s - len, 0, len);
+			char *temp = ft_substr(s - len, 0, len);
+			if (!temp)
+			{
+				while (i > 0)
+					free(ret[--i]);
+				free(ret);
+				return (0);
+			}
+			ret[i++] = temp;
 		}
 		else
 			++s;

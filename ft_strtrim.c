@@ -20,11 +20,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 	int		start;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	a = (ft_strlen(s1)) - 1;
 	start = 0;
-	if (!s1 || !set)
-		return (NULL);
 	while (ft_strchr(set, s1[i]) && i <= a)
 		i++;
 	while (ft_strchr(set, s1[a]) && a >= 0)
