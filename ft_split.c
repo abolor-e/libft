@@ -6,7 +6,7 @@
 /*   By: abolor-e <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:58:53 by abolor-e          #+#    #+#             */
-/*   Updated: 2023/10/23 13:01:55 by abolor-e         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:36:56 by abolor-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,20 @@ static size_t	ft_slen(const char *s, char c)
 	return (ret);
 }
 
+char	**ft_free(char **split_array)
+{
+	size_t	i;
+
+	i = 0;
+	while (split_array[i] != 0)
+	{
+		free(split_array[i]);
+		i++;
+	}
+	free(split_array);
+	return (0);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**ret;
@@ -65,15 +79,9 @@ char	**ft_split(const char *s, char c)
 			len = 0;
 			while (*s && *s != c && ++len)
 				++s;
-			char *temp = ft_substr(s - len, 0, len);
-			if (!temp)
-			{
-				while (i > 0)
-					free(ret[--i]);
-				free(ret);
-				return (0);
-			}
-			ret[i++] = temp;
+			ret[i] = ft_substr(s - len, 0, len);
+			if (ret[i++] == NULL)
+				return (ft_free(ret));
 		}
 		else
 			++s;
