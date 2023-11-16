@@ -22,7 +22,7 @@ int	ft_isalnum(int c)
 		++a;
 		return (a);
 	}
-	else 
+	else
 		return (0);
 }
 /*
